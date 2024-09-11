@@ -87,5 +87,20 @@
             >;
         };
 
+                config_layer {
+                        label = "CONFIG";
+// -----------------------------------------------------------------------------------------
+// |      |     |     |     |     |     |   | F1  | F2  | F3  |  F4  | Subir Volumen | Bajar Volumen |
+// |      |     |     |     |     |     |   | F5  | F6  | F7  |  F7  | Subir brillo  | Bajar Brillo  |
+// |      |     |     |     |     |     |   | F9  | F10 | F11 |  F12 |     |      |
+//                    | GUI |     | SPC |   | ENT | F1 | ALT |
+            bindings = <
+&trans           &trans          &trans          &trans           &trans           &trans     &kp F1  &kp F2  &kp F3  &kp F4  &kp C_VOL_UP &kp C_VOL_DN
+&rgb_ug RGB_TOG  &rgb_ug RGB_HUI &rgb_ug RGB_SAI &rgb_ug RGB_BRI  &trans           &trans     &kp F5  &kp F6  &kp F7  &kp F8  &kp C_BRI_UP &kp C_BRI_DN
+&rgb_ug RGB_EFF  &rgb_ug RGB_EFR &rgb_ug RGB_HUD &rgb_ug RGB_SAD  &rgb_ug RGB_BRD  &trans     &kp F9  &kp F10 &kp F11 &kp F12 &trans       &kp C_MUTE
+                  &kp LGUI  &trans &kp SPACE                                                  &kp ENTER  &trans  &kp RALT
+            >;
+        };
+
         };
 };
