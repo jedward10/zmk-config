@@ -8,6 +8,13 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/rgb.h>
+
+#define QWERTY 0
+#define NAVEGA 1
+#define SYMBOL 2
+#define NUMPAD 3
+#define CONFIG 4
 
 / {
   chosen {
